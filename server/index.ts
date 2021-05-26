@@ -9,7 +9,6 @@ import helmet from 'helmet'
 import compression from 'compression'
 
 import apollo from '@server/core/apollo'
-import { connectDB } from '@server/core/database'
 
 const { PORT = '3000', NODE_ENV } = process.env
 const port = parseInt(PORT, 10) || 3000
@@ -24,7 +23,6 @@ const handle = nextApp.getRequestHandler()
 
 nextApp.prepare().then(() => {
   const server = express()
-  connectDB()
 
   //security
   server.use(

@@ -48,6 +48,7 @@ const configureWebpack = (config, { dev }) => {
 			loader: 'eslint-loader',
 		})
 	}
+	
 
   return config;
 };
